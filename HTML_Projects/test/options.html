@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<select id="form-s" multiple="multiple">
+    <option selected>city1</option>
+    <option selected value="c2">city2</option>
+    <option value="c3">city3</option>
+</select>
+<select id="aioConceptName">
+    <option value="s1" selected >choose io</option>
+    <option value="s2">roma </option>
+    <option value="s3">totti</option>
+</select>
+<select id="test">
+    <option value="s4">paloma</option>
+    <option value="s5" selected >foo</option>
+    <option value="s6">bar</option>
+</select>
+<script type="javascript">
+$('select').change(function() {
+    var a=$(':selected').text(); // "city1city2choose iofoo"
+    var b=$(':selected').val();  // "city1" - selects just first query !
+    //but..
+    var c=$(':selected').map(function(){ // ["city1","city2","choose io","foo"]
+        return $(this).text();
+    });
+    var d=$(':selected').map(function(){ // ["city1","c2","s1","s5"]
+        return $(this).val();
+    });
+    console.log(a,b,c,d);
+});
+</script>
+
+
+</body>
+</html>

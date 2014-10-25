@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<title>recognition</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="bootstrap/css/main_style.css" type="text/css" rel="stylesheet"/>
+    <!-- we can also use cdn file for href content delivery network-->
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="bootstrap/css/bootstrap-theme.min.css">
+    <script src="bootstrap/js/respond.js"></script>
+    <script src="main.js"></script>
+    <script src="bootstrap/js/tip.js"></script>
+    <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="http://code.jquery.com/mobile/1.4.4/jquery.mobile-1.4.4.min.js"></script>
+
+	<link href="jquery/ui-examples.css" rel="stylesheet">
+	<link href="jquery/jquery.ui/css/cupertino/jquery-ui-1.10.3.custom.css" rel="stylesheet">
+</head>
+<body>
+<script src="bootstrap/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/less.js/1.7.5/less.min.js"></script>
+
+<div class="wrapper">
+
+    <p id="demo"></p>
+<!-- top navigation menu-->
+<nav class="top-head">
+    <div class="social-buttons">
+      <a href="http://www.yelp.com/biz/thai-peacock-restaurant-portland-2" class="yelp pull-left">
+        <img  class="media-object" height="40" width="40" src="http://www.thaipeacockrestaurant.com/wp-content/themes/vortex/images/social/yelp-logo-white.png">
+      </a>
+	  <a href ="https://www.facebook.com/pages/Thai-Peacock/543689895706295" class="facebook pull-left">
+        <img class ="media-object" height="40" width="40" src="http://www.thaipeacockrestaurant.com/wp-content/themes/vortex/images/social/facebook-logo.png">
+
+	</a>
+	<a href="http://www.tripadvisor.com/Restaurant_Review-g52024-d439908-Reviews-Thai_Peacock-Portland_Oregon.html" class="tripadvisor pull-left">
+        <img class="media-object" height="40" width="40" src="http://www.thaipeacockrestaurant.com/wp-content/themes/vortex/images/social/trip-advisor.png">
+
+	</a>
+	<a href="http://www.citysearch.com/profile/8459680/portland_or/thai_peacock_restaurant.html" class="citysearch pull-left">
+
+        <img class="media-object" height="40" width="40" src="http://www.thaipeacockrestaurant.com/wp-content/themes/vortex/images/social/city-search-white.png">
+	</a>
+	<h1>thai peacock</h1>
+    <p><b>219 sw 9th ave portland,or 97205 | 503.228.2310 |thai1234@gmail.com</b></p>
+
+    <div class="container">
+    <div class="head-image">
+      <ul class="nav navbar-nav group-of-li">
+         <li><a href="main.html" target="_top">Home</a></li>
+         <li class="active"><a href="recognition.html">Recognition</a></li>
+         <li><a href="about.html" target="_top">About</a></li>
+         <li><a href="order_menu.html" target="_top">Menu+Cater</a></li>
+         <li><a href="gallery.html" target="_top">Gallery</a></li>
+      </ul>
+    </div>
+    </div>
+    </div>
+</nav>
+
+<div id="ui-examples">
+	<div class="example accordion">
+		<div id="group-of-three">
+			<h1>Our Recognition from City Mayor</h1>
+			<div>
+				<p>
+				Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.
+				</p>
+				<p>
+				<a href="#step2" id="acc-skip2">Next »</a>
+				</p>
+			</div>
+			<h1>Another Recognition</h1>
+			<div>
+				<a name="step2"></a>
+				<p>
+				Phasellus mattis tincidunt nibh.
+				</p>
+				<p>
+				<a href="#step3" id="acc-skip3">Next »</a>
+				</p>
+			</div>
+			<h1>Last one..</h1>
+			<div>
+				<a name="step3"></a>
+				<p>
+				Nam dui erat, auctor a, dignissim quis.
+				</p>
+			</div>
+		</div>
+
+	<button id="trigger-a">Go go widget accordion!</button>
+
+	</div>
+</div>
+
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="jquery/jquery.min.js"><\/script>');</script>
+<script src="jquery/jquery.ui/js/jquery-ui-1.10.3.custom.js"></script>
+
+<script>
+$(document).ready(function(){
+	var $group = $('#group-of-three');
+
+	$('#trigger-a').click(function(e) {
+		e.preventDefault();
+
+		$group.accordion();
+	});
+
+	$('#acc-skip2').click(function(e) {
+		e.preventDefault();
+
+		$group.accordion('option', 'active', 1);
+	});
+});
+</script>
+<nav class="last">
+    <div class ="container">
+    <div data-role="footer">
+    <div data-role="navbar">
+        <ul class="nav navbar-nav">
+         <li><a href="main.html" target="_top">Home</a></li>
+         <li><a href="recognition.html" target="_top">Recognition</a></li>
+         <li><a href="about.html" target="_top">About</a></li>
+         <li><a href="order_menu.html" target="_top">Menu+Cater</a></li>
+         <li class="active"><a href="gallery.html" target="_top">Gallery</a></li>
+      </ul>
+    </div>
+    </div>
+    </div>
+</nav>
+</div>
+</body>
+</html>

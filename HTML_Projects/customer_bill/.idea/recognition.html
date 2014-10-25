@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<title>UI</title>
+	<link href="jquery/ui-examples.css" rel="stylesheet">
+	<link href="jquery/jquery.ui/css/cupertino/iamges/jquery-ui-1.10.3.custom.css" rel="stylesheet">
+</head>
+<body>
+
+<div id="ui-examples">
+	<div class="example accordion">
+		<div id="group-of-three">
+			<h1>My First Item</h1>
+			<div>
+				<p>
+				Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.
+				</p>
+				<p>
+				<a href="#step2" id="acc-skip2">Next »</a>
+				</p>
+			</div>
+			<h1>Another Item</h1>
+			<div>
+				<a name="step2"></a>
+				<p>
+				Phasellus mattis tincidunt nibh.
+				</p>
+				<p>
+				<a href="#step3" id="acc-skip3">Next »</a>
+				</p>
+			</div>
+			<h1>My last item</h1>
+			<div>
+				<a name="step3"></a>
+				<p>
+				Nam dui erat, auctor a, dignissim quis.
+				</p>
+			</div>
+		</div>
+
+	<button id="trigger-a">Go go widget accordion!</button>
+
+	</div>
+</div>
+
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="jquery/jquery.min.js"><\/script>');</script>
+<script src="jquery/jquery.ui/js/jquery-ui-1.10.3.custom.js"></script>
+
+<script>
+$(document).ready(function(){
+	var $group = $('#group-of-three');
+
+	$('#trigger-a').click(function(e) {
+		e.preventDefault();
+
+		$group.accordion();
+	});
+
+	$('#acc-skip2').click(function(e) {
+		e.preventDefault();
+
+		$group.accordion('option', 'active', 1);
+	});
+});
+</script>
+</body>
+</html>
