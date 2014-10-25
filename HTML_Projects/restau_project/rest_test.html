@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+
+</head>
+<body>
+
+<script type="text/javascript">
+
+var receipt = {chicken:12.70, salmon:18.00};
+
+chicken_amt=(receipt.chicken);
+salmon_amt=(receipt.salmon);
+/* use parseFloat to round decimal numbers*/
+
+
+ function user_calculation()
+ {
+   user_name=document.getElementById("name").value;
+   console.log(user_name);
+   user_pick= document.getElementById("order").value;
+   console.log(user_pick);
+   user_count=document.getElementById("counts").value;
+   console.log(user_count);
+
+
+
+  if(user_count < 6)
+  {
+  switch(user_pick)
+  {
+    case 1:
+    costOfMeal=parseFloat(chicken_amt*.15+chicken_amt).toFixed(3);
+    alert(user_name +" your bill costs $ "+costOfMeal);
+    break;
+
+    case 2:
+    costOfMeal=parseFloat(salmon_amt*.15+salmon_amt).toFixed(3);
+    alert(user_name +" your bill costs $ "+(costOfMeal));
+    break;
+
+    case 3:
+    costOfMeal1=(chicken_amt*.15+chicken_amt);
+    costOfMeal2=(salmon_amt*.15+salmon_amt);
+    costOfMeal=parseFloat(costOfMeal1+costOfMeal2).toFixed(3);
+    alert(user_name + " your bill costs $ "+(costOfMeal));
+    break;
+
+
+    default:
+    alert("can i talk to the Manager Please");
+    break;
+  }
+ }
+  else
+  {
+  switch(user_pick)
+  {
+
+    case 1:
+    costOfMeal=parseFloat(chicken_amt*.18+chicken_amt).toFixed(3);
+    alert(user_name+" your bill costs $ "+(costOfMeal));
+    break;
+
+    case 2:
+    costOfMeal=parseFloat(salmon_amt*.18+salmon_amt).toFixed(3);
+    alert(user_name+" your bill costs $ " +(costOfMeal));
+    break;
+
+    case 3:
+    costOfMeal1=(chicken_amt*.18+chicken_amt);
+    costOfMeal2=(salmon_amt*.18+salmon_amt);
+    costOfMeal=parseFloat(costOfMeal1+costOfMeal2).toFixed(3);
+    alert(user_name+" your bill costs $ "+(costOfMeal));
+    break;
+
+
+    default:
+    alert("can i talk to the Manager Please");
+    break;
+  }
+  }
+
+
+
+}
+
+</script>
+<form action="POST">
+Enter the name:<input type="text" id= "name"  value="  "/>
+<br/>
+<br/>
+Enter what u like to order[1 for chicken,
+2 for salmon,3 for both]:<input type="text" id= "order"  value=""/>
+<br/>
+<br/>
+Enter how many orders:<input type="number" id= "counts"  value=""/>
+<br/>
+<br/>
+<input type="button" onclick="user_calculation()" value="Enter the Customer option"/>
+</form>
+</body>
+</html>

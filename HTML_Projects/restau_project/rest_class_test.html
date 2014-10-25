@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<body>
+<link href="cons.css" rel="stylesheet">
+<p id="demo"></p>
+
+<script type="text/javascript">
+
+ function person(name)
+{
+    this.name = name;
+    this.bill ={};
+    this.order =function() {
+        var done = 'n';
+        while (done === 'y') {
+            item = prompt("Enter the order");
+            cost = prompt("Enter the cost");
+            noOfOrder = prompt("Enter the no_of orders");
+            this.bill[item] = [cost,noOfOrder];
+            done = prompt("enter 'y' for continue 'n' for no-orders");
+        }
+    }
+
+
+}
+//order();
+var party_size=parseInt(prompt("how many are at the table"));
+alert(typeof (party_size));
+var table = [];
+for(i=0;i<3;i++) {
+    var name = prompt("get the names from the table");
+    var person = new person(name);
+    table.push(person);
+}
+//for(i=0;i<party_size;i++){
+//    table[i].order();
+//    console.log(table[i].bill);
+//}
+//var calculation = function()
+//{
+//    var total = function () {
+//        final_total = parseFloat(receipt1.cost * receipt1.noOfOrder).toFixed(3);
+//        alert("your total is"+final_total);
+//        return final_total;
+//    };
+//
+//    var individual_pay = function () {
+//        individual_total = parseFloat(final_total / receipt1.head_count).toFixed(3);
+//        alert("everyone has to pay"+individual_total);
+//        return individual_total;
+//    };
+//
+//    var tip = function () {
+//        if (receipt1.noOfOrder < 3) {
+//            alert("no tips..Thank you")
+//        }
+//
+//        else if (receipt1.noOfOrder > 6) {
+//            tip = parseFloat(final_total * .18).toFixed(3);
+//            alert("you owe " + tip);
+//        }
+//        else {
+//            tip = parseFloat(final_total * .15).toFixed(3);
+//            alert(" you owe " + tip);
+//        }
+//
+// };
+//    choice =option
+//    grand_total = total();
+//    each_pay = individual_pay();
+//    bill_tip = tip();
+//}
+
+//document.createElement("p").innerHTML =
+//        (receipt1.name + " has to pay  " + grand_total +" your tip is " +parseFloat(bill_tip).toFixed(2) +"each has to pay " + each_pay);
+//
+//console.log(receipt1.name + " has to pay  " + final_total +" your tip is " +parseFloat(tip).toFixed(2));
+
+</script>
+<!--<form>-->
+    <!--<div>-->
+    <!--<input type ="button" value ="Order bill" onclick="order()"/>-->
+    <!--<input type="button" value="Calculate bill" onclick="calculation()"/>-->
+<!--</div>-->
+<!--</form>-->
+
+</body>
+</html>

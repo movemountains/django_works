@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<body>
+<link href="cons.css" rel="stylesheet">
+<p id="demo"></p>
+
+<script type="text/javascript">
+
+var order = function (name, head_count, order, cost, noOfOrder)
+{
+    this.name = prompt("Enter the name");
+    this.head_count = prompt("How many people are at the table");
+    this.order = prompt("Enter the order");
+    this.cost = prompt("Enter the cost");
+
+    this.noOfOrder = prompt("Enter the no_of orders");
+//    this.option =  prompt("enter 'y' for continue or 'n' to exit").toLocaleLowerCase();
+//        if (option === 'y')
+//        {
+//             order();
+//        }
+//        else
+//            {
+//                alert("done orders")
+//            }
+
+};
+
+//order();
+
+var receipt1 = new order();
+console.log(receipt1);
+
+var calculation = function()
+{
+    var total = function () {
+        final_total = parseFloat(receipt1.cost * receipt1.noOfOrder).toFixed(3);
+        alert("your total is"+final_total);
+        return final_total;
+    };
+
+    var individual_pay = function () {
+        individual_total = parseFloat(final_total / receipt1.head_count).toFixed(3);
+        alert("everyone has to pay"+individual_total);
+        return individual_total;
+    };
+
+    var tip = function () {
+        if (receipt1.noOfOrder < 3) {
+            alert("no tips..Thank you")
+        }
+
+        else if (receipt1.noOfOrder > 6) {
+            tip = (final_total * .18);
+            alert("you owe " + tip);
+        }
+        else {
+            tip = final_total * .15;
+            alert(" you owe " + tip);
+        }
+
+ };
+
+    grand_total = total();
+    each_pay = individual_pay();
+    bill_tip = tip();
+}
+
+//document.createElement("p").innerHTML =
+//        (receipt1.name + " has to pay  " + grand_total +" your tip is " +parseFloat(bill_tip).toFixed(2) +"each has to pay " + each_pay);
+//
+console.log(receipt1.name + " has to pay  " + final_total +" your tip is " +parseFloat(tip).toFixed(2));
+
+</script>
+<form>
+    <div>
+    <input type ="button" value ="Order bill" onclick="order()"/>
+    <input type="button" value="Calculate bill" onclick="calculation()"/>
+</div>
+</form>
+
+</body>
+</html>

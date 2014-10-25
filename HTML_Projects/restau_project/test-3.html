@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+
+
+<script type="text/javascript">
+
+function order(name)
+{
+    this.name=name;
+    this.check = [];
+
+    var sub_order = function(order,cost,noOfOrder)
+    {
+        this.order = prompt("Enter the order");
+        this.cost = prompt("Enter the cost");
+        this.noOfOrder=prompt("Enter the no_of orders");
+
+    }
+
+    this.option = function()
+    {
+        var option = prompt("would u like to order enter 'y' or 'n' ");
+        option.toLowerCase();
+        if (option === 'y')
+        {
+            sub_order();
+        }
+        else
+        {
+            alert("no orders");
+        }
+    }
+    option();
+}
+
+var person_name = prompt("what is your name");
+var receipt1 = new order(person_name);
+console.log(receipt1);
+
+
+//var tip = function(){
+//    if (receipt1.noOfOrder > 6) {
+//        tip = (receipt1.cost * .18);
+//        alert("you owe "+tip);
+//    }
+//    else
+//        {
+//          tip = receipt1.cost * .15;
+//          alert(" you owe " + tip);
+//        }
+//
+//}
+//tip();
+console.log(receipt1.name + " has to pay  " + receipt1.cost +" your tip is " +parseFloat(tip).toFixed(2));
+</script>
+<!--<form>-->
+    <!--<input type="button" value="customer bill" onclick="user_option()"/>-->
+<!--</form>-->
+</body>
+</html>

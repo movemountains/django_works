@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<script type="text/javascript">
+var receipt=[];
+var total = 0;
+var head_count = parseInt(prompt("How many people are going to restaurant:"));
+var bill = function()
+{
+var take_order  = function(){
+    order = prompt("enter the order");
+    receipt.push(order);
+    cost = parseFloat(prompt("Enter the price"));
+    //  console.log(cost + " " + typeof(cost));
+    receipt.push(cost);
+    option();
+    return cost;
+
+
+}
+
+//var total = function() {
+//    total = parseFloat(total) + cost;
+//    //console.log(total);
+//    total = parseFloat(total).toFixed(2);
+//    return total;
+//}
+
+var option =function() {
+    option = prompt("Enter 'y' for continue or 'n' for exit");
+
+    if (option === 'y') {
+        take_order();
+    }
+    else {
+        alert("no orders");
+
+    }
+}
+    //alert("u have to pay " +total);
+//    console.log("The total is " + total);
+//    console.log("you pay "+(parseFloat(total)/head_count))
+//
+//
+
+//alert(receipt);
+
+console.log(receipt);
+//console.log(total);
+
+
+}
+
+bill();
+take_order();
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Restaurant Project</title>
+    <link href="rest_style.css">
+
+</head>
+<body>
+<script >
+  var people=parseInt(prompt("Enter How many people:"));
+  var cost=parseInt(prompt("Enter the Cost of meal:"));
+  tip=0.15;
+  if (people >=6)
+  {
+  var costPerPerson=Math.ceil(((cost*.18)+cost)/people);
+  alert("you owe"+costPerPerson)
+  }
+  else
+  {
+  var costPerPerson=Math.ceil(((cost*.15)+cost)/people);
+  alert("you owe"+costPerPerson)
+  }
+</script>
+</body>
+</html>
+
