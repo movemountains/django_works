@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <!--scale screens correctly-->
+    <meta name="vieport" content="width=device-width, initial-scale=1.0">
+    <title>Kalia's Restaurant</title>
+    <link href="bootstrap/css/main_style.css" type="text/css" rel="stylesheet"/>
+    <!-- we can also use cdn file for href content delivery network-->
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="bootstrap/css/bootstrap-theme.min.css">
+    <script src="bootstrap/js/respond.js"></script>
+    <script src="bootstrap/js/tip.js"></script>
+    <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="http://code.jquery.com/mobile/1.4.4/jquery.mobile-1.4.4.min.js"></script>
+    <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="//code.jquery.com/ui/1.11.2/jquery-ui.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.15/angular.min.js"></script>
+    <script src ="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular.min.js"></script>
+</head>
+<body>
+
+<!-- script files-->
+<!-- Latest compiled and minified JavaScript -->
+<script src="bootstrap/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/less.js/1.7.5/less.min.js"></script>
+
+<div class="wrapper">
+
+<!-- top navigation menu-->
+<nav class="top-head">
+    <div class="social-buttons">
+    <a href="http://www.yelp.com/biz/thai-peacock-restaurant-portland-2" class="yelp">
+        <img height="40" width="40" src="http://www.thaipeacockrestaurant.com/wp-content/themes/vortex/images/social/yelp-logo-white.png">
+    </a>
+	<a href="https://www.facebook.com/pages/Thai-Peacock/543689895706295" class="facebook">
+        <img height="40" width="40" src="http://www.thaipeacockrestaurant.com/wp-content/themes/vortex/images/social/facebook-logo.png">
+
+	</a>
+	<a href="http://www.tripadvisor.com/Restaurant_Review-g52024-d439908-Reviews-Thai_Peacock-Portland_Oregon.html" class="tripadvisor">
+        <img height="40" width="40" src="http://www.thaipeacockrestaurant.com/wp-content/themes/vortex/images/social/trip-advisor.png">
+
+	</a>
+	<a href="http://www.citysearch.com/profile/8459680/portland_or/thai_peacock_restaurant.html" class="citysearch">
+
+        <img height="40" width="40" src="http://www.thaipeacockrestaurant.com/wp-content/themes/vortex/images/social/city-search-white.png">
+	</a>
+	<h1>thai peacock</h1>
+    <p><b>219 sw 9th ave portland,or 97205 | 503.228.2310 |thaipeacockpdx.gmail.com</b></p>
+    <div class="container">
+    <div class="head-image">
+      <ul class="nav navbar-nav">
+         <li><a href="main.html" target="_top">Home</a></li>
+         <li><a href="recognition.html" target="_top">Recognition</a></li>
+         <li><a href="about.html" target="_top">About</a></li>
+         <li class="active"><a href="order_menu.html">Menu+Cater</a></li>
+         <li><a href="gallery.html" target="_top">Gallery</a></li>
+      </ul>
+    </div>
+    </div>
+    </div>
+</nav>
+<div class="order">
+<fieldset class="menu">
+<input type="button" value="Order Menu" onclick="#fullmeal"/>
+<label col>Menu order hours are between 10:00 am to 11:30 pm</label>
+</fieldset>
+</div>
+<!--display time on the page-->
+
+<div class="table-responsive center">
+<table class="table">
+    <thead>
+    <th class="th_align">Home Made Small Plates</th>
+    </thead>
+    <tr>
+    <td>
+    <p><a href = "bill" >1.Pad Thai <span>$12.00</span></a></p>
+    </td>
+    </tr>
+    <tr>
+    <td>
+    <p><a href="" >2.Giew Tod <span> $9.00</span></a></p>
+    </td>
+    </tr>
+    <tr>
+    <td>
+    <p><a href="">3.Salmon Curry <span>$15.45</span></a></p>
+    </td>
+    </tr>
+    <tr>
+    <td>
+    <p><a href="">4.Shrimp Curry <span>$19.35</span></a></p>
+    </td>
+    </tr>
+    <thead>
+    <th class="th_align">Tossed Greens</th>
+    </thead>
+    <tr>
+    <td>
+    <p><a href="">1.Broccoli Salad <span>@5.68</span></a></p>
+    </td>
+    </tr>
+    <tr>
+    <td>
+    <p><a href="">2.Asian Salad <span>$8.90</span></a></p>
+    </td>
+    </tr>
+    <tr>
+    <td>
+    <p><a href="">3.Chicken Salad <span>$14.55</span></a></p>
+    </td>
+    </tr>
+    <tr>
+    <td>
+    <p><a href="">4.Tofu and Mixed Vegetables Salad<span> $12.25</span></a></p>
+    </td>
+    </tr>
+    <thead>
+    <th class="th_align">Soups</th>
+    </thead>
+    <tr>
+    <td>
+    <p><a href="">1.Asian Vegetable soup <span>$.6.75</span></a></p>
+    </td>
+    </tr>
+    <tr>
+    <td>
+    <p><a href="">2.Chicken Soup <span> $.9.45</span></a></p>
+    </tr>
+    <tr>
+    <td>
+    <p><a href="">Thai Basil Soup <span>$.10.25</span></a></p>
+    </td>
+    </tr>
+    <thead>
+    <th class="th_align">Drinks</th>
+    </thead>
+    <tr>
+    <td>
+    <p><a href="" > 1.Wine<span>$15.00</span></a></p>
+    </td>
+    </tr>
+    <tr>
+    <td>
+    <p><a href="">  2.Beer <span>$13.50</span></a></p>
+    </td>
+    </tr>
+    <tr>
+    <td>
+    <p><a href="">3.Lemonade <span>$4.50</span></a></p>
+    </td>
+    </tr>
+    <thead>
+    <th class="th_align">Sweets</th>
+    </thead>
+    <tr>
+    <td>
+    <p><a href="">1.Sweet Rice<span>$6.50</span></a></p>
+    </td>
+    </tr>
+    <tr>
+    <td>
+    <p><a href="">2.Mango Pudding<span>$9.55</span></a></p>
+    </td>
+    </tr>
+    <tfoot>
+    <td>
+    <p><a href="">3.Banana Custard<span>$8.95</span></a></p>
+    </td>
+    </tfoot>
+</table>
+</div>
+
+<br>
+<br>
+<br>
+<!-- to-do: add date picker here -->
+<script>
+$(function() {
+$( "#datepicker" ).datepicker();
+});
+</script>
+<p>Date: <input type="text" id="datepicker"></p>
+<div id="ctrl-as-exmpl" ng-controller="SettingsController1 as settings">
+  Name: <input type="text" ng-model="settings.name"/>
+  [ <a href="" ng-click="settings.greet()">greet</a> ]<br/>
+  Contact:
+  <ul>
+    <li ng-repeat="contact in settings.contacts">
+      <select ng-model="contact.type">
+         <option>phone</option>
+         <option>email</option>
+      </select>
+      <input type="text" ng-model="contact.value"/>
+      [ <a href="" ng-click="settings.clearContact(contact)">clear</a>
+      | <a href="" ng-click="settings.removeContact(contact)">X</a> ]
+    </li>
+    <li>[ <a href="" ng-click="settings.addContact()">add</a> ]</li>
+ </ul>
+</div>
+<nav class="last">
+    <div class ="container">
+    <div data-role="footer">
+    <div data-role="navbar">
+        <ul class="nav navbar-nav">
+         <li class="active"><a href="main.html" target="_top">Home</a></li>
+         <li><a href="recognition.html" target="_top">Recognition</a></li>
+         <li><a href="about.html" target="_top">About</a></li>
+         <li><a href="order_menu.html" target="_top">Menu+Cater</a></li>
+         <li><a href="gallery.html" target="_top">Gallery</a></li>
+      </ul>
+    </div>
+    </div>
+    </div>
+</nav>
+</div>
+</body>
+</html>
