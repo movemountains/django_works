@@ -1,0 +1,27 @@
+{% load staticfiles %}
+
+<link rel="stylesheet" type="text/css" href="{% static 'polls/styles.css' %}"/>
+
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="{% static 'polls/bootstrap/css/bootstrap.min.css' %}">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="{% static 'polls/bootstrap/css/bootstrap-theme.min.css' %}">
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="{% static 'polls/bootstrap/js/bootstrap.min.js' %}"></script>
+<div class="container">
+<div class ="jumbotron">
+<h1>Our New Polls</h1>
+</div>
+{% if latest_question_list %}
+    <ul class="nav nav-pills nav-stacked">
+    {% for question in latest_question_list %}
+
+        <li class="active"><a href="{% url 'polls:detail' question.id %}">{{ question.question_text }}</a></li>
+    {%  endfor %}
+    </ul>
+{% else %}
+    <p>No polls are available.</p>
+{% endif %}
+</div>
