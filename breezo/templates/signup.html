@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h3>Sign up here</h3>
+<form class = "form-horizontal" role="form" method="POST" action =''>
+<div class="form-group">
+    {% csrf_token %}
+    {{ form.as_p }}
+   <a href='/login/'> <input type='submit' value='Sign up'></a>
+</div>
+</form>
+
+<p>let's move to..<a href='/login/'><button>Login</button></a></p>
+{% endblock content  %}
+
