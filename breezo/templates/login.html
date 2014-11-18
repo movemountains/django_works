@@ -1,21 +1,18 @@
 {% extends 'base.html' %}
 {% block content %}
-
     {% if form.errors %}
-      <p class='alert alert-error'>Invlaid username/password</p>
+    <p class='alert alert-error'>Invalid username/password</p>
     {% endif %}
-
-       <form class="form-inline" role="form" action='/authenticate/' method='post'>
-             {% csrf_token %}
-             <div class ="form-group">
-               <label="username">User name:</label>
-               <input type="text" name="username" value="" id="username"/>
-             </div>
-             <div class="form-group">
-               <label for="password">Password:</label>
-               <input type="password" name="password" value="" id="password">
-             </div>  
-              <button type="submit" class="btn btn-success">Login</button>
-             
-      </form>
-{% endblock content %}   
+        <form class="form-inline" role="form" action='/authenticate/' method='post'>
+            {% csrf_token %}
+            <div class ="form-group">
+                <label="username">User name:</label>
+                <input type="text" name="username" value="" id="username"/>
+            </div>
+            <div class="form-group">
+                <label for="password">Password:</label>
+                <input type="password" name="password" value="" id="password">
+            </div>
+                <button type="submit" class="btn btn-success login">Login</button>
+        </form>
+{% endblock content %}

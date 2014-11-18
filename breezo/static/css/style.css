@@ -1,0 +1,90 @@
+/* Move down content because we have a fixed navbar that is 50px tall */
+body {
+  padding-top: 50px;
+  padding-bottom: 20px;
+}
+
+body{
+  background-image:url("images/stickynotes.jpg");
+  width:930px;
+  height:2000px;
+  background-size:cover;
+  padding:5px;
+}
+
+.login{
+   margin-left:200px;
+   width:600px;
+   border:1px solid black;
+   background-color:white;
+   color:white;
+
+} 
+
+input{
+  color:black;
+}
+
+select {
+  width: 200px;
+}
+.overflow {
+  height: 200px;
+}
+
+ul li a{
+     font-size:20px ;
+     color:black;
+     font-family: "HelveticaNeue",sans-serif;
+     text-transform: lowercase;
+     display:inline-block;
+ }
+
+nav{
+  /* background-color:white;*/
+   background-size:cover;
+   margin:10px;
+   padding:5px;
+   text-align:center;
+   border:solid gray 1px;
+}
+
+.login_form{
+  background-image:url("images/login1.jpg");
+  width:500px;
+  height:500px;
+  background-size:cover;
+  padding:10px; 
+  margin-left:220px;
+  margin-top:20px;
+}
+h3{
+  margin-left:20px;
+}
+
+.breezo_caption{
+  margin-left:20px;
+  margin-top:25px;
+  padding:5px;
+}
+
+/*.login_btn{*/
+  /*padding:10px;*/
+  /*margin-top:20px;*/
+  /*margin-left:40px ;*/
+/*}*/
+.login,#signup_btn{
+    align-items:center;
+    width:80px;
+    height:40px;
+    margin-top:10px;
+}
+label,.login_btn,input{
+  margin-left:20px;
+}
+
+#signup_btn{
+    margin-left:120px;
+    margin-top: 20px;
+
+}

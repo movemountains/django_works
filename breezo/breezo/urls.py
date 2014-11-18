@@ -21,11 +21,14 @@ urlpatterns = patterns('',
       url(r'^register_success/$', 'demo.views.register_success', name='register_success'),
 
     # signup urls
-     url(r'^$', 'signup.views.home', name='home'),
+     url(r'^signup/$', 'signup.views.signup', name='signup'),
 
     # user urls
    # url(r'^user/', include('user_profile.urls') namespace='user_profile'),    
- 
+
+    #bucket urls
+      url(r'^bucket/$', 'bucket.views.bucket', name="bucket"),
+     
     # admin urls
-     url(r'^admin/', include(admin.site.urls)),
+      url(r'^admin/', include(admin.site.urls)),
 )

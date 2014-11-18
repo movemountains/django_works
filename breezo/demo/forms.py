@@ -8,7 +8,7 @@ class MyRegistrationForm(UserCreationForm):
     email = forms.EmailField(required=True)
     class Meta:
         model = User
-	fields = ('username', 'email', 'password1', 'password2')
+	    fields = ('username', 'email', 'password1', 'password2')
     def save(self, commit=True):
         user = super(MyRegistrationForm, self).save(commit=False)
 	user.username = self.cleaned_dta['username']

@@ -6,16 +6,17 @@ from django.utils import timezone
 
 # Create your models here.
 
-class Bucket_list(models.Model):
+class BucketList(models.Model):
     Public = 'P'
     Private = 'R'
     OPTION = (
         ('P','Public'),
         ('R','Private'),
 )    
- 
+
    #user_email=models.EmailField()
     bucket_name=models.CharField(max_length=120, null=True, blank=True)
+    user_email=models.EmailField() 
     bucket_description=models.CharField(max_length=150, null=True, blank=True)
     bucket_open_date=models.DateTimeField('date started', blank=True)
     bucket_option = models.CharField(max_length=1, choices=OPTION,default='P')
@@ -31,6 +32,11 @@ class Done(models.Model):
 class Doing(models.Model):
     card_name=models.CharField(max_length=400, null=True, blank=True)
     doing_date=models.DateTimeField('starting date', blank=True)
+
+class BucketForm(ModelForm):
+    class Meta:
+        model = Bucket
+        fields= ['bucket_name','user_email','bucket_description','bucket_open_date','bucket_option']
 
 class Meta:
     ordering =['bucket_name']

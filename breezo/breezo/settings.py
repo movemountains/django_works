@@ -31,6 +31,7 @@ TEMPLATE_DEBUG = True
 
 ALLOWED_HOSTS = []
 
+CRISPY_TEMPLATE_PACK = "bootstrap3"
 
 # Application definition
 
@@ -44,6 +45,8 @@ INSTALLED_APPS = (
     'signup',
     'user_profile',
     'bucket',
+    'blog',
+    'crispy_forms',
 )
 
 MIDDLEWARE_CLASSES = (

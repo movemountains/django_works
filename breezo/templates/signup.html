@@ -1,16 +1,16 @@
+
+
 {% extends 'base.html' %}
-
+{#{% load crispy_forms_tags %}#}
 {% block content %}
-
-<h3>Sign up here</h3>
-<form class = "form-horizontal" role="form" method="POST" action =''>
-<div class="form-group">
-    {% csrf_token %}
-    {{ form.as_p }}
-   <a href='/login/'> <input type='submit' value='Sign up'></a>
-</div>
-</form>
-
+    <h3>Sign up here</h3>
+    <form class = "form-horizontal" method="POST" action =''>
+    <div class="form-group">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <input type='submit' id="signup_btn" value='Sign up'>
+    </div>
+    </form>
 <p>let's move to..<a href='/login/'><button>Login</button></a></p>
-{% endblock content  %}
-
+{#{%  crispy form %}#}
+{% endblock content %}

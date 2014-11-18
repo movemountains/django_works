@@ -8,7 +8,7 @@ from .forms import SignUpForm
 from .models import SignUp
 
 
-def home(request):
+def signup(request):
 
 
     form = SignUpForm(request.POST or None)
@@ -19,7 +19,7 @@ def home(request):
         messages.success(request, 'Thanks for signing up')
 
 
-    return render_to_response("signup.html" , locals(),
+    return render_to_response("signup.html", locals(),
                               context_instance=RequestContext(request))
 
 
