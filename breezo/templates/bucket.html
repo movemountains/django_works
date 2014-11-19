@@ -3,7 +3,7 @@
 <h3>welcome to create new buckets...</h3>
     <form class ="form-horizontal" method="post" action="">
     <div class=""form-group">
-        { csrf_token %}
+        {% csrf_token %}
         {{ form.as_p }}
         <input type="submit" id="bucket_btn" value="submit">
         </div>

@@ -6,16 +6,19 @@ from django.contrib.auth.forms import UserCreationForm
 class MyRegistrationForm(UserCreationForm):
 
     email = forms.EmailField(required=True)
+
     class Meta:
         model = User
-	    fields = ('username', 'email', 'password1', 'password2')
-    def save(self, commit=True):
-        user = super(MyRegistrationForm, self).save(commit=False)
-	user.username = self.cleaned_dta['username']
-        user.email = self.cleaned_data['email']
-        user.set_password(self.cleaned_data['password1'])
-	# user.set_password(self.cleaned_data['password1'])
-	if commit:
-	    user.save()
-	return user
+        fields = ('username','email','password1','password2')
+
+
+def save(self, commit=True):
+    user = super(MyRegistrationForm, self).save(commit=False)
+    user.username = self.cleaned_data['username']
+    user.email = self.cleaned_data['email']
+    user.set_password(self.cleaned_data['password1'])
+
+    if commit:
+        user.save()
+    return user
     

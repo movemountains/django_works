@@ -28,6 +28,10 @@ urlpatterns = patterns('',
 
     #bucket urls
       url(r'^bucket/$', 'bucket.views.bucket', name="bucket"),
+      url(r'^todo/$', 'bucket.views.todo', name='todo'),
+      url(r'^done/$','bucket.views.done', name='done'),
+      url(r'^doing/$','bucket.views.doing', name='doing'),
+
      
     # admin urls
       url(r'^admin/', include(admin.site.urls)),

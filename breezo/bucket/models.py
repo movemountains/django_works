@@ -33,10 +33,6 @@ class Doing(models.Model):
     card_name=models.CharField(max_length=400, null=True, blank=True)
     doing_date=models.DateTimeField('starting date', blank=True)
 
-class BucketForm(ModelForm):
-    class Meta:
-        model = Bucket
-        fields= ['bucket_name','user_email','bucket_description','bucket_open_date','bucket_option']
 
 class Meta:
     ordering =['bucket_name']
