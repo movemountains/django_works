@@ -25,7 +25,8 @@ urlpatterns = patterns('',
 
     # user urls
    # url(r'^user/', include('user_profile.urls') namespace='user_profile'),    
-
+    # breezo urls
+     url(r'^breezo/$', 'demo.views.breezo', name='breezo'),
     #bucket urls
       url(r'^bucket/$', 'bucket.views.bucket', name="bucket"),
       url(r'^todo/$', 'bucket.views.todo', name='todo'),
