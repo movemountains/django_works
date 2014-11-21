@@ -1,0 +1,39 @@
+{% extends 'breezo_main.html' %}
+{% block content %}
+    {% if form.errors %}
+    <p class='alert alert-error'>Invalid username/password</p>
+    {% endif %}
+        <form autocomplete="off" class="form-horizontal" role="form" action='/authenticate/' method='post'>
+            {% csrf_token %}
+            <div class ="form-group">
+                <label for="username">User name:</label>
+                <input type="text" name="username" value="" id="username">
+            </div>
+            <div class="form-group">
+                <label for="password">Password:</label>
+                <input type="password" name="password" value="" id="password">
+            </div>
+                <button type="submit" class="btn btn-success end">Login</button>
+        </form>
+{% endblock content %}
+
+
+
+
+{#{%  extends 'breezo_main.html' %}#}
+{#{% block content %}#}
+{#    {% if form.errors %}#}
+{#    <p class='alert alert-error'>Invalid username/password</p>#}
+{#    {% endif %}#}
+{# <form class="form-signin">#}
+{#      <h3 class="form-signin-heading"> login to Breezo</h3>#}
+{#      <input type="text" class="form-control" name="username" placeholder="User name" required="" autofocus="" />#}
+{#     <br>#}
+{#      <input type="password" class="form-control" name="password" placeholder="Password" required=""/>#}
+{#      <label class="checkbox">#}
+{#        <input type="checkbox" value="remember-me" id="rememberMe" name="rememberMe"> Remember me#}
+{#      </label>#}
+{#      <button class="btn btn-lg btn-primary btn-block" type="submit">Login</button>#}
+{#    </form>#}
+{##}
+{#{% endblock content %}#}

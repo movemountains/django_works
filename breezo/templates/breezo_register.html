@@ -1,0 +1,12 @@
+{% extends 'breezo_main.html' %}
+{% block content %}
+    <h2>Register</h2>
+    {% for field in form %}
+        {{ field.error }}
+    {% endfor %}
+    <form autocomplete="off" action='/breezo_register/' method='post'>
+        {% csrf_token %}
+        {{form}}
+        <button type="submit" class="btn btn-success end">Register</button>
+    </form>
+{% endblock content %}

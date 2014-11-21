@@ -8,18 +8,16 @@ from .forms import SignUpForm
 from .models import SignUp
 
 
-def signup(request):
-
+def breezo_signup(request):
 
     form = SignUpForm(request.POST or None)
-
 
     if form.is_valid():
         save_post = form.save()        
         messages.success(request, 'Thanks for signing up')
 
 
-    return render_to_response("signup.html", locals(),
+    return render_to_response("breezo_signup.html", locals(),
                               context_instance=RequestContext(request))
 
 

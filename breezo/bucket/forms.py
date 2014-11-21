@@ -5,6 +5,10 @@ class BucketListForm(forms.ModelForm):
     class Meta:
         model = BucketList
 
+# create a from to add the BucketList fields
+form = BucketListForm()
+
+
 class To_DoForm(forms.ModelForm):
     class Meta:
         model = To_Do

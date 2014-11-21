@@ -1,0 +1,16 @@
+{% extends 'breezo_main.html' %}
+{%  block content %}
+<form role="form">
+  <h5>Welcome to the Feedback Form</h5>
+  <div class="form-group">
+    <div class="input-group">
+      <label class="control-label" for="inputSuccess1">Email-Addrees:</label>
+      <label class="sr-only" for="exampleInputEmail2">Email address</label>
+      <input type="email" class="form-control" id="exampleInputEmail2" placeholder="Enter email">
+     </div>
+  </div>
+  <label class="control-label" for="inputSuccess1">Send us your Feedbacks:</label>
+  <textarea class="form-control" rows="6" cols="60"></textarea>
+  <button type="submit" class="btn btn-success end">Submit</button>
+</form>
+{% endblock content %}

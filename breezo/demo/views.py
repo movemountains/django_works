@@ -8,11 +8,11 @@ from .forms import MyRegistrationForm
 
 # Create your views here.
 
-def login(request):
+
+def breezo_login(request):
     token = {}
     token.update(csrf(request))
-    print token
-    return render_to_response('login.html', token)
+    return render_to_response('breezo_login.html', token)
 
 
 def authenticate(request):
@@ -20,34 +20,33 @@ def authenticate(request):
     password = request.POST.get('password', '')
     user = auth.authenticate(username=username, password=password)
 
-
     if user is not None:
         auth.login(request, user)
-        return HttpResponseRedirect('/login_success')
+        return HttpResponseRedirect('/breezo_loginsuccess')
  
     else:
-       return HttpResponseRedirect('/invalid')   
+        return HttpResponseRedirect('/breezo_loginfail')
 
-def login_success(request):
-    return render_to_response('login_success.html',{'first_name':request.user.username})
 
-def invalid(request):
-    return render_to_response('invalid.html')
+def breezo_loginsuccess(request):
+    return render_to_response('breezo_loginsuccess.html', {'first_name':request.user.username})
 
-def logout(request):
-    logout_username = request.user.username
-    print logout_username
 
-    auth.logout(request)
-    return render_to_response('logout.html',{'first_name':request.user.username})
+def breezo_loginfail(request):
+    return render_to_response('breezo_loginfail.html')
 
-def register(request):
+
+def breezo_logout(request):
+    return render_to_response('breezo_logout.html')
+
+
+def breezo_register(request):
 
     if request.method == 'POST':
         form = MyRegistrationForm(request.POST)
         if form.is_valid():
             form.save()
-            return HttpResponseRedirect('/register_success')
+            return HttpResponseRedirect('/breezo_registersuccess')
 
     else:
         form = MyRegistrationForm()
@@ -55,8 +54,15 @@ def register(request):
     token.update(csrf(request))
     token['form'] = form
 
-    return render_to_response('register.html', token)
+    return render_to_response('breezo_register.html', token)
 
-def register_success(request):
-    return render_to_response('register_success.html')
-     
+
+def breezo_registersuccess(request):
+    return render_to_response('breezo_registersuccess.html')
+
+
+# def breezo_registrationfail(request):
+#     return render_to_response('breezo_registrationfail.html')
+
+def breezo_contact(request):
+     return render_to_response('breezo_contact.html')

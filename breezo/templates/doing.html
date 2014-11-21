@@ -1,10 +1,10 @@
-{%  extends 'base.html' %}
+{%  extends 'breezo_main.html' %}
 {% block content %}
     <form class="form-horizontal" method="post" action="">
     <div class ="form-group">
         {% csrf_token %}
         {{ form.as_p }}
-        <input type="submit" id="doing_btn" value="submit">
+        <button type="submit" class="btn btn-success end">Submit</button>
     </div>
     </form>
 {% endblock content %}

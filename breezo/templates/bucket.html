@@ -1,11 +1,16 @@
-{% extends 'base.html' %}
+{% extends 'breezo_main.html' %}
+{#{%  load bootstrap_tags %}#}
 {% block content %}
 <h3>welcome to create new buckets...</h3>
     <form class ="form-horizontal" method="post" action="">
-    <div class=""form-group">
+    <div class="form-group">
         {% csrf_token %}
+{#        {{ form |as_bootstrap }}#}
+{#        <label>Date Started</label>#}
+{#        <input type="text" id="datepicker">#}
         {{ form.as_p }}
-        <input type="submit" id="bucket_btn" value="submit">
+        <button type="submit" class="btn btn-success end">Submit</button>
         </div>
     </form>
+{#{% bootstrap_tags %}#}
 {% endblock content %}

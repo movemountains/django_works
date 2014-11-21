@@ -23,6 +23,10 @@ body{
 
 input{
   color:black;
+  margin-left:20px ;
+}
+label{
+    margin-left:20px;
 }
 
 select {
@@ -55,7 +59,7 @@ nav{
   height:500px;
   background-size:cover;
   padding:10px; 
-  margin-left:220px;
+  margin-left:80px;
   margin-top:20px;
 }
 h3{
@@ -68,23 +72,70 @@ h3{
   padding:5px;
 }
 
+button{
+    margin-top: 20px;
+    margin-left:160px;
+}
+
+
+/*.form-signin {*/
+  /*max-width: 340px;*/
+  /*padding: 15px 35px 45px;*/
+  /*margin: 0 auto;*/
+  /*background-color: #fff;*/
+  /*border: 1px solid rgba(0,0,0,0.1);*/
+
+  /*.form-signin-heading,*/
+	/*.checkbox {*/
+	  /*margin-bottom: 30px;*/
+	/*}*/
+
+	/*.checkbox {*/
+	  /*font-weight: normal;*/
+	/*}*/
+
+	/*.form-control {*/
+	  /*position: relative;*/
+	  /*font-size: 16px;*/
+	  /*height: auto;*/
+	  /*padding: 10px;*/
+		/*@include box-sizing(border-box);*/
+
+		/*&:focus {*/
+		  /*z-index: 2;*/
+		/*}*/
+	/*}*/
+
+	/*input[type="text"] {*/
+	  /*margin-bottom: -1px;*/
+	  /*border-bottom-left-radius: 0;*/
+	  /*border-bottom-right-radius: 0;*/
+	/*}*/
+
+	/*input[type="password"] {*/
+	  /*margin-bottom: 20px;*/
+	  /*border-top-left-radius: 0;*/
+	  /*border-top-right-radius: 0;*/
+	/*}*/
+/*}*/
 /*.login_btn{*/
   /*padding:10px;*/
   /*margin-top:20px;*/
   /*margin-left:40px ;*/
 /*}*/
-.login,#signup_btn{
-    align-items:center;
-    width:80px;
-    height:40px;
-    margin-top:10px;
-}
-label,.login_btn,input{
-  margin-left:20px;
-}
+/*.end{*/
+    /*width:80px;*/
+    /*height:40px;*/
+    /*margin-top:10px;*/
+/*}*/
+/*label,.end,input{*/
+  /*margin-left:20px;*/
+/*}*/
+/*.welcome{*/
+    /*margin-left:125px;*/
+/*}*/
+/*#signup_btn{*/
+    /*margin-left:120px;*/
+    /*margin-top: 20px;*/
 
-#signup_btn{
-    margin-left:120px;
-    margin-top: 20px;
-
-}
+/*}*/

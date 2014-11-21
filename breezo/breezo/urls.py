@@ -10,23 +10,23 @@ urlpatterns = patterns('',
 
 
     # authentication urls
-      url(r'^login/', 'demo.views.login', name='login'),
+      url(r'^breezo_login/', 'demo.views.breezo_login', name='breezo_login'),
       url(r'^authenticate/$', 'demo.views.authenticate', name='authenticate'),
-      url(r'^logout/$', 'demo.views.logout', name='logout'),
-      url(r'^login_success/$', 'demo.views.login_success', name='login_success'),
-      url(r'^invalid/$', 'demo.views.invalid', name='invalid'),
+      url(r'^breezo_logout/$', 'demo.views.breezo_logout', name='breezo_logout'),
+      url(r'^breezo_loginsuccess/$', 'demo.views.breezo_loginsuccess', name='breezo_loginsuccess'),
+      url(r'^breezo_loginfail/$', 'demo.views.breezo_loginfail', name='breezo_loginfail'),
     
     # registration urls
-      url(r'^register/$', 'demo.views.register', name='register'),
-      url(r'^register_success/$', 'demo.views.register_success', name='register_success'),
+      url(r'^breezo_register/$', 'demo.views.breezo_register', name='breezo_register'),
+      url(r'^breezo_registersuccess/$', 'demo.views.breezo_registersuccess', name='breezo_registersuccess'),
 
     # signup urls
-     url(r'^signup/$', 'signup.views.signup', name='signup'),
+     url(r'^breezo_signup/$', 'signup.views.breezo_signup', name='breezo_signup'),
 
     # user urls
-   # url(r'^user/', include('user_profile.urls') namespace='user_profile'),    
+    # url(r'^user/', include('user_profile.urls') namespace='user_profile'),    
     # breezo urls
-     url(r'^breezo/$', 'demo.views.breezo', name='breezo'),
+     url(r'^breezo_contact/$', 'demo.views.breezo_contact', name='breezo_contact'),
     #bucket urls
       url(r'^bucket/$', 'bucket.views.bucket', name="bucket"),
       url(r'^todo/$', 'bucket.views.todo', name='todo'),

@@ -18,8 +18,9 @@ class BucketList(models.Model):
     bucket_name=models.CharField(max_length=120, null=True, blank=True)
     user_email=models.EmailField() 
     bucket_description=models.CharField(max_length=150, null=True, blank=True)
-    bucket_open_date=models.DateTimeField('date started', blank=True)
-    bucket_option = models.CharField(max_length=1, choices=OPTION,default='P')
+    bucket_open_date=models.DateField('date started', blank=True)
+    # help_text="Please use the following format: <em>YYYY-MM-DD</em>."
+    bucket_option = models.CharField(max_length=7, choices=OPTION,default='P')
 
 class To_Do(models.Model):
     card_name=models.CharField(max_length=400, null=True, blank=True)
